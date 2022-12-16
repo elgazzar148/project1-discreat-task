@@ -1,43 +1,47 @@
 ﻿using System;
 
-namespace ConsoleApp17
+namespace PROJECT2
 {
     internal class Program
     {
         static void Main(string[] args)
-        {
-            Console.Write("Enter n1: ");
-            int n1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("***************");
-            Console.Write("Enter n2: ");
-            int n2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("***************");
-            Console.WriteLine();
+        { 
+        int sum = 0 ;
+        Console.Write("Enter Your n1: ");
+          int  N1 = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("");
+            Console.WriteLine("**************");
+            Console.WriteLine("");
 
-            for (int i = n1; i <= n2; i++)
+            Console.Write("Enter Your n2: ");
+          int  N2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("");
+            Console.WriteLine("**************");
+            Console.WriteLine("");
+
+            for (int i = N1; i <= N2; i++)
             {
+                int j = 1;
 
-                
-                for (int y = 2; y <=i; y++)
+                while (j < i && i > 5)
                 {
-                    if (i % y == 0)
-
+                    if (i % j == 0)
                     {
-                        break;
+                        sum += j;
                     }
-
-                    if (y == i - 1)
-                    {
-                        Console.Write("---" + i);
-                        
-                        
-                    }
+                    j++;
 
                 }
+                if (sum == i)
+                {
+                    Console.Write("----" + i + "---");
+                }
 
-
+                sum = 0;
             }
-        }
+            }
+            
     }
 }
